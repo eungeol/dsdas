@@ -1,0 +1,218 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>경기대 교재 검색 및 대여</title>
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            background-color: #f4f4f4;
+            margin: 0;
+            padding: 0;
+        }
+        .header {
+            background-color: #3498db;
+            color: #fff;
+            padding: 15px 20px;
+            text-align: center;
+            font-size: 1.5em;
+            position: relative;
+        }
+        .header .login {
+            position: absolute;
+            top: 15px;
+            right: 20px;
+            font-size: 0.9em;
+        }
+        .header .login a {
+            color: #fff;
+            text-decoration: none;
+            margin-left: 15px;
+        }
+        .container {
+            max-width: 1200px;
+            margin: 30px auto;
+            padding: 20px;
+            background-color: #fff;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            border-radius: 10px;
+        }
+        .search-bar {
+            text-align: center;
+            margin-bottom: 30px;
+        }
+        .search-bar input[type="text"] {
+            width: 80%;
+            padding: 10px;
+            font-size: 1em;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+        }
+        .search-bar button {
+            padding: 10px 20px;
+            background-color: #3498db;
+            color: #fff;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            margin-left: 5px;
+        }
+        .search-bar button:hover {
+            background-color: #2980b9;
+        }
+        .book-list {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-around;
+        }
+        .book-item {
+            width: 30%;
+            margin-bottom: 30px;
+            text-align: center;
+            border: 1px solid #ddd;
+            border-radius: 10px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            padding: 15px;
+            background-color: #fff;
+        }
+        .book-item img {
+            max-width: 100%;
+            height: auto;
+            border-radius: 5px;
+        }
+        .book-item h4 {
+            margin-top: 10px;
+            font-size: 1.2em;
+        }
+        .ranking {
+            margin-top: 30px;
+        }
+        .ranking h3 {
+            font-size: 1.5em;
+            border-bottom: 2px solid #3498db;
+            padding-bottom: 5px;
+            margin-bottom: 15px;
+        }
+        .ranking-list {
+            list-style-type: none;
+            padding: 0;
+        }
+        .ranking-list li {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            background-color: #f9f9f9;
+            border-radius: 5px;
+            padding: 10px 15px;
+            margin-bottom: 10px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        }
+        .ranking-list li .rank-number {
+            font-size: 1.2em;
+            font-weight: bold;
+            color: #3498db;
+            margin-right: 15px;
+        }
+        .ranking-list li .book-info {
+            flex-grow: 1;
+        }
+        .ranking-list li .book-info h4 {
+            margin: 0;
+            font-size: 1em;
+        }
+        .ranking-list li .book-info p {
+            margin: 5px 0 0;
+            font-size: 0.9em;
+            color: #777;
+        }
+    </style>
+</head>
+<body>
+   
+    <div class="header">
+        <div class="library-link">
+            <a href="https://library.kyonggi.ac.kr/">🏛 도서관으로 돌아가기</a>
+        </div>
+        <img src="https://search.pstatic.net/common/?src=http%3A%2F%2Fblogfiles.naver.net%2FMjAyMDExMDZfMTcw%2FMDAxNjA0NjUyNTc3NTU4.iF0WuuUZDnm3K9hR5zpBtK0OlNT3XeKMuEJ2d6vcs2gg.yz5Y7qyfdbdcwclM-LV5t_AR6455gYPHTKUO_RwI3F8g.PNG.designbox1983%2Fimage.png&type=sc960_832" alt="로고 이미지">
+        <h1>경기대교재 검색 및 대여</h1>
+        <div class="login">
+            <a href="kim2.html">시간표 </a>
+            <a href="log.html">로그인</a>
+            <a href="#">회원가입</a>
+        </div>
+    </div>
+
+    <div class="container">
+        <div class="search-bar">
+            <input type="text" placeholder="교재를 검색해 보세요...">
+            <button>검색</button>
+        </div>
+
+        <div class="book-list">
+            <div class="book-item">
+                <img src="https://shopping-phinf.pstatic.net/main_3249029/32490296750.20230920072304.jpg?type=w300" alt="교재 이미지 1">
+                <h4>데이터베이스1</h4>
+                <p>저자:미크, 기무라 메이지 </p>
+            </div>
+            <div class="book-item">
+                <img src="https://search.pstatic.net/sunny/?src=https%3A%2F%2Fcontents.kyobobook.co.kr%2Fsih%2Fpdt%2Ffit-in%2F458x687%2F9791190017114.jpg&type=sc960_832" alt="교재 이미지 2">
+                <h4>알기쉬운선형대수학</h4>
+                <p>저자: 김태균외5인</p>
+                <a href="grap.html">정보</a>
+            </div>
+            <div class="book-item">
+                <img src="https://shopping-phinf.pstatic.net/main_4986116/49861164635.20240820090145.jpg?type=w300" alt="교재 이미지 3">
+                <h4>경제학</h4>
+                <p>저자: 스미스,마르크스</p>
+            </div>
+        </div>
+
+        <div class="ranking">
+            <h3>인기 교재 순위</h3>
+            <ul class="ranking-list">
+                <li>
+                    <div class="rank-number">1</div>
+                    <div class="book-info">
+                        <h4>혼자 공부하는 자바</h4>
+                        <p>저자: 신용권</p>
+                        <p>14000</p>
+                    </div>
+                </li>
+                <li>
+                    <div class="rank-number">2</div>
+                    <div class="book-info">
+                        <h4>생활 법률 상식 사전</h4>
+                        <p>저자: 김용국</p>
+                        <P>12500</p>
+                    </div>
+                </li>
+                <li>
+                    <div class="rank-number">3</div>
+                    <div class="book-info">
+                        <h4>응용통계학 입문 제3판 </h4>
+                        <p>저자: 이외숙</p>
+                        <p>15000</p>
+                    </div>
+                </li>
+                <li>
+                    <div class="rank-number">4</div>
+                    <div class="book-info">
+                        <h4>경영학원론</h4>
+                        <p>저자: 박지연</p>
+                        <p>9000</p>
+                    </div>
+                </li>
+                <li>
+                    <div class="rank-number">5</div>
+                    <div class="book-info">
+                        <h4>잘 쉬는기술</h4>
+                        <p>저자:클라우디아 해먼드</p>
+                        <p>10000</p>
+                    </div>
+                </li>
+            </ul>
+        </div>
+    </div>
+</body>
+</html>
